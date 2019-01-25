@@ -1,17 +1,100 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
+    <title>Gswipe - Login</title>
     <meta charset="utf-8">
-    <title>Flofix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <!-- Install Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <!-- Install Javascripts -->
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <section id="" class="">
-      <h1>
-        Flofix is awesome.
-      </h1>
+    <!-- Front -->
+    <section id="gswipe-front" class="front">
+      <div class="front-container">
+        <button class="btn btn-login animated-button sandy-two" onclick="showLogin()">Login</button>
+        <button class="btn btn-register animated-button sandy-two" onclick="showRegister()">Register</button>
+      </div>
     </section>
+    <!-- /Front -->
+    <!-- Login -->
+    <section id="gswipe-login">
+      <div class="login-container">
+        <form action="/login.php">
+          <div class="form-group customInput">
+            <input type="login" class="form-control input-log" id="login" placeholder="LOGIN">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control input-pwd" id="pwd" placeholder="PASSWORD">
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="check-remember"/>
+            <label for="check-remember"><span>Remember Me</span></label>
+          </div>
+          <!--
+          <div class="form-group">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Remember me</span>
+            </label>
+          </div>
+          -->
+          <button type="submit" class="btn btn-login">Login</button>
+        </form>
+        <button type="none" class="btn btn-register" onclick="showRegister()">Register</button>
+        <button type="none" class="btn btn-back" onclick="showFront()">Back</button>
+      </div>
+    </section>
+    <!-- /Login -->
+    <!-- Register -->
+    <section id="gswipe-register">
+      <div class="register-container">
+        <form action="/register.php">
+          <div class="form-group">
+            <input type="name" class="form-control" id="name-reg" placeholder="FULL NAME">
+          </div>
+          <div class="form-group">
+            <input type="login" class="form-control" id="login-reg" placeholder="LOGIN">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email-reg" placeholder="EMAIL">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="PASSWORD">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="pwd-reg" placeholder="CONFIRM PASSWORD">
+          </div>
+          <div class="input-group">
+            <input type="number" class="form-control" id="day-reg" placeholder="DAY">
+            <select class="form-control" id="month-reg">
+              <option selected disabled>MONTH</option>
+              <option value="01">JAN</option>
+              <option value="02">FEB</option>
+              <option value="03">MAR</option>
+              <option value="04">APR</option>
+              <option value="05">MAY</option>
+              <option value="06">JUN</option>
+              <option value="07">JUL</option>
+              <option value="08">AUG</option>
+              <option value="09">SEP</option>
+              <option value="10">OCT</option>
+              <option value="11">NOV</option>
+              <option value="12">DEC</option>
+            </select>
+            <input type="number" class="form-control" id="year-reg" placeholder="YEAR">
+          </div>
+          <button type="submit" class="btn btn-register">Register</button>
+        </form>
+        <button class="btn btn-back" onclick="showFront()">Back</button>
+      </div>
+    </section>
+    <!-- /Register -->
   </body>
-  <footer>
-
-  </footer
 </html>
